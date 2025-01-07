@@ -88,57 +88,301 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: #1e1e1e;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        header button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #6a5acd;
+            color: white;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .recent-posts, .featured-works {
+            margin-top: 20px;
+        }
+
+        .recent-posts h2, .featured-works h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .post-card, .work-card {
+            background-color: #292929;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .post-card h3, .work-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+            margin-top: 40px;
+        }
+
+        footer a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #1e1e1e;
+        }
+
+        .profile-content {
+            max-width: 50%;
+        }
+
+        .profile-content h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .profile-content h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            margin: 10px 0;
+        }
+
+        .profile-content p {
+            font-size: 1rem;
+            color: white;
+            margin: 20px 0;
+        }
+
+        .resume-button {
+            background-color: #6a5acd;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .resume-button:hover {
+            background-color: #ff4c4c;
+        }
+
+        .profile-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 243px;
+            height: 243px;
+            background-color: #e3f2fd;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+                /* Ajustar estilo para tarjetas */
+        .work-card-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .work-card-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .work-card-text h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .work-card-text p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+
+                /* Estilo para los íconos de herramientas/tecnologías */
+        .tech-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-icons img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+        }
+
+        .tech-icons img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+
+                /* Botón de Ver en GitHub */
+        .github-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #24292f;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .github-button:hover {
+            background-color: #0366d6;
+            transform: scale(1.05);
+        }
+
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Hi, I am Jesus Osorio Galvez, Full Stack Developer</h1>
-        <p>In this web page you will see my work experience</p>
-        <button>Download Resume</button>
+        <div class="profile-section">
+            <div class="profile-content">
+                <h1>Hi, I am Jesus Osorio,</h1>
+                <h2>Fullstack developer</h2>
+                <p>
+                    I am a motivated full-stack developer with a degree in Multimedia and digital animation from Universidad
+Autónoma de Nuevo León (UANL). Through professional projects and team collaborations, with experience in creating scalable solutions and system integration. I possess well-developed soft skills, including teamwork, effective communication, and problem-solving. I am looking for a role where I can continue to grow professionally and contribute value in an agile development environment.
+                </p>
+                <a href="cv_JesusOsorio.pdf" download>
+                    <button class="resume-button">Download Resume</button>
+                  </a>
+                  
+            </div>
+            <div class="profile-image">
+                <img src="https://github.com/jesus2419/imagenes/blob/main/yo.jpg?raw=true" alt="Profile">
+            </div>
+        </div>
     </header>
 
-    <div class="section recent-posts">
-        <h2>Recent Posts</h2>
-        <div class="card-grid">
-            <div class="post-card">
-                <h3>Making a design system from scratch</h3>
-                <p>12 Feb 2020 | Design, Pattern</p>
-                <p>Short description about the post goes here...</p>
-            </div>
-            <div class="post-card">
-                <h3>Creating pixel perfect icons in Figma</h3>
-                <p>12 Feb 2020 | Figma, Icon Design</p>
-                <p>Short description about the post goes here...</p>
-            </div>
-        </div>
-    </div>
-
     <div class="section featured-works">
-        <h2>Featured Works</h2>
+        <h2>Fullstack solutions</h2>
         <div class="card-grid">
             <div class="work-card">
-                <h3>Designing Dashboards</h3>
-                <p>2020 | Dashboard</p>
-                <p>Brief description of the work goes here...</p>
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/stardobys2.png?raw=true" alt="Designing Dashboards" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>Star Dobys</h3>
+                        <p>May-2023 | Jan-2024</p>
+                        <p>Stardobys is a web-based social network built with React, Node.js, and MySQL designed to connect music artists with their fans. The platform allows artists to share their music, interact with followers, and grow their fanbase. Fans can discover new music, follow their favorite artists, comment on posts, and stay updated on upcoming releases and events.</p>
+                        <!-- Fila de íconos de tecnologías -->
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+                        </div>
+                        <!-- Botón Ver en GitHub -->
+                        <a href="https://github.com/jesus2419/StarDobys" target="_blank" class="github-button">View on GitHub</a>
+                    </div>
+                </div>
             </div>
+            
+            
             <div class="work-card">
-                <h3>Vibrant Portraits of 2020</h3>
-                <p>2020 | Illustration</p>
-                <p>Brief description of the work goes here...</p>
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/servinear.jpg?raw=true" alt="Mobile Application" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>Service Finder App</h3>
+                        <p>Feb-2024 | Ongoing</p>
+                        <p>This is a mobile application built using Kotlin and Android Studio designed to connect users with various service providers. The app allows users to browse, request, and rate services offered by professionals in different fields. Whether you're looking for someone to handle home repairs, personal training, tutoring, or other freelance services, this app makes it easy to find the right person for the job.</p>
+                        
+                        <!-- Fila de íconos de tecnologías -->
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android Studio" title="Android Studio">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" title="PHP">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure" title="Azure">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu" title="Ubuntu">
+                        </div>
+                        
+                        <!-- Botón Ver en GitHub -->
+                        <a href="https://github.com/jesus2419/ServiNear" target="_blank" class="github-button">View on GitHub</a>
+                    </div>
+                </div>
             </div>
-            <div class="work-card">
-                <h3>36 Days of Malayalam type</h3>
-                <p>2020 | Typography</p>
-                <p>Brief description of the work goes here...</p>
-            </div>
+            
         </div>
     </div>
+    
+
+
+    
 
     <footer>
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-        <p>&copy; 2025 All rights reserved</p>
+        <a href="https://www.linkedin.com/in/jes%C3%BAs-osorio-79772a229/">Linkedin</a>
     </footer>
 </body>
 </html>
