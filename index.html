@@ -303,6 +303,64 @@
             transform: scale(1.05);
         }
 
+        .profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #1e1e1e;
+    flex-direction: column; /* Cambio para que se apilen verticalmente en pantallas pequeñas */
+}
+
+.profile-content {
+    text-align: center; /* Centra el texto */
+    max-width: 90%; /* Ajusta el tamaño en dispositivos pequeños */
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Ajuste al tamaño de la imagen */
+    height: 150px; /* Ajuste al tamaño de la imagen */
+    background-color: #e3f2fd;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 120px; /* Reducción del tamaño de la imagen en pantallas más pequeñas */
+        height: 120px; /* Reducción del tamaño de la imagen en pantallas más pequeñas */
+    }
+
+    .profile-content h1 {
+        font-size: 1.8rem; /* Ajuste de tamaño del texto */
+    }
+
+    .profile-content h2 {
+        font-size: 1.5rem; /* Ajuste de tamaño del texto */
+    }
+
+    .profile-content p {
+        font-size: 0.9rem; /* Ajuste de tamaño del texto */
+    }
+}
+
+
 
     </style>
 </head>
@@ -312,18 +370,15 @@
             <div class="profile-content">
                 <h1>Hi, I am Jesus Osorio,</h1>
                 <h2>Fullstack developer</h2>
+                
                 <p>
                     I am a motivated full-stack developer with a degree in Multimedia and digital animation from Universidad
 Autónoma de Nuevo León (UANL). Through professional projects and team collaborations, with experience in creating scalable solutions and system integration. I possess well-developed soft skills, including teamwork, effective communication, and problem-solving. I am looking for a role where I can continue to grow professionally and contribute value in an agile development environment.
                 </p>
-                <a href="CV_JesusOsorio.pdf" download>
-                    <button class="resume-button">Download Resume</button>
-                  </a>
+                <a href="CV_JesusOsorio.pdf" target="_blank" class="github-button" download>See Resume</a>
                   
             </div>
-            <div class="profile-image">
-                <img src="https://github.com/jesus2419/imagenes/blob/main/yo.jpg?raw=true" alt="Profile">
-            </div>
+           
         </div>
     </header>
 
