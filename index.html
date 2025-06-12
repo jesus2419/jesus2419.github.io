@@ -264,25 +264,54 @@
             margin: 5px 0;
         }
 
+        /* ...existing code... */
+        .work-card-text {
+            max-width: 100%;
+            box-sizing: border-box;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .work-card-text p {
+            max-width: 100%;
+            box-sizing: border-box;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
 
                 /* Estilo para los íconos de herramientas/tecnologías */
         .tech-icons {
             display: flex;
             gap: 10px;
             margin-top: 15px;
+            flex-wrap: wrap; /* Permite que los iconos bajen a otra línea */
+            justify-content: flex-start;
         }
 
-        .tech-icons img {
+        .tech-icons img, .tech-icons i {
             width: 30px;
             height: 30px;
             object-fit: contain;
             border-radius: 5px;
             transition: transform 0.2s ease;
+            margin-bottom: 5px;
         }
 
-        .tech-icons img:hover {
+        .tech-icons img:hover, .tech-icons i:hover {
             transform: scale(1.1);
             cursor: pointer;
+        }
+
+        /* Responsive: reduce tamaño y espacio de iconos en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .tech-icons {
+                gap: 6px;
+                justify-content: center;
+            }
+            .tech-icons img, .tech-icons i {
+                width: 24px;
+                height: 24px;
+            }
         }
 
 
@@ -360,6 +389,11 @@
 
     .profile-content p {
         font-size: 0.9rem; /* Ajuste de tamaño del texto */
+    }
+
+    .work-card-text p {
+        font-size: 0.95rem;
+        padding: 0 2px;
     }
 }
 
@@ -720,39 +754,39 @@
         </div>
 
         <div class="card-grid">
-<div class="work-card">
-    <div class="work-card-content">
-        <img src="https://github.com/jesus2419/imagenes/blob/main/gym.jpg?raw=true" alt="GymFit Back Office" class="work-card-image">
-        <div class="work-card-text">
-            <h3>GymFit Back Office</h3>
-            <p>Sep 2024 | Present</p>
-            <p>
-                A comprehensive admin dashboard for gym management, built with React and Material-UI. 
-                Allows staff to manage memberships, trainer schedules, equipment, and analytics. 
-                Integrates with the GymFit mobile app via a Node.js API and MySQL database for real-time data synchronization.
-            </p>
-            
-            <!-- Tech Stack Icons -->
-            <div class="tech-icons">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" alt="Material-UI" title="Material-UI">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" title="Express">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux" title="Redux (State Management)">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
+            <div class="work-card">
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/gym.jpg?raw=true" alt="GymFit Back Office" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>GymFit Back Office</h3>
+                        <p>Sep 2024 | Present</p>
+                        <p>
+                            A comprehensive admin dashboard for gym management, built with React and Material-UI. 
+                            Allows staff to manage memberships, trainer schedules, equipment, and analytics. 
+                            Integrates with the GymFit mobile app via a Node.js API and MySQL database for real-time data synchronization.
+                        </p>
+                        
+                        <!-- Tech Stack Icons -->
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" alt="Material-UI" title="Material-UI">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" title="Express">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux" title="Redux (State Management)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
+                        </div>
+                        
+                        
+                        
+                        <!-- Action Buttons -->
+                        <div class="app-buttons">
+                            <a href="https://github.com/jesus2419/GYM-Admin" target="_blank" class="github-button">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            
-            
-            <!-- Action Buttons -->
-            <div class="app-buttons">
-                <a href="https://github.com/jesus2419/GYM-Admin" target="_blank" class="github-button">View on GitHub</a>
-            </div>
-        </div>
-    </div>
-</div>
-    
+        
 
         </div>
 
