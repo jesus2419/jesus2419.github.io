@@ -3,268 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="icon" href="backend.ico" />  <!-- Para .ico -->
+    <meta name="description" content="Jesus Osorio Galvez — Backend & Mobile Developer specialized in native Android (Kotlin/Jetpack Compose), Flutter and RESTful APIs. Open-source author on pub.dev.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="backend.ico" />
 
-    <title>Jesus Osorio Galvez</title>
+    <title>Jesus Osorio Galvez · Backend & Mobile Developer</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
+        :root {
+            --bg: #0c0709;
+            --bg-soft: #150b0e;
+            --surface: rgba(255, 255, 255, 0.04);
+            --surface-border: rgba(255, 60, 80, 0.14);
+            --text: #f6f0f1;
+            --text-muted: #b39aa0;
+            --accent: #ff1f4b;
+            --accent-2: #ff5e7a;
+            --accent-grad: linear-gradient(135deg, #ff1f4b 0%, #ff5e3a 100%);
+            --accent-rgb: 255, 31, 75;
+            --radius: 16px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
         }
 
-        header {
-            padding: 20px;
-            text-align: center;
-            background-color: #1e1e1e;
-        }
+        * { box-sizing: border-box; }
 
-        header h1 {
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1rem;
-            margin: 10px 0;
-        }
-
-        header button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            background-color: #6a5acd;
-            color: white;
-            cursor: pointer;
-        }
-
-        .section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .recent-posts, .featured-works {
-            margin-top: 20px;
-        }
-
-        .recent-posts h2, .featured-works h2 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .post-card, .work-card {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .post-card h3, .work-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            margin-top: 40px;
-        }
-
-        footer a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
+            font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(900px circle at 12% -5%, rgba(255, 31, 75, 0.18), transparent 45%),
+                radial-gradient(800px circle at 95% 0%, rgba(255, 94, 58, 0.12), transparent 40%);
+            background-attachment: fixed;
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            padding: 20px;
-            text-align: center;
-            background-color: #1e1e1e;
-        }
+        a { color: inherit; }
 
-        header h1 {
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1rem;
-            margin: 10px 0;
-        }
-
-        header button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 5px;
-            background-color: #6a5acd;
-            color: white;
-            cursor: pointer;
-        }
-
-        .section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .recent-posts, .featured-works {
-            margin-top: 20px;
-        }
-
-        .recent-posts h2, .featured-works h2 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .post-card, .work-card {
-            background-color: #292929;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .post-card h3, .work-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            margin-top: 40px;
-        }
-
-        footer a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .profile-section {
+        /* ---------- Navbar ---------- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
-            padding: 50px;
-            background-color: #1e1e1e;
+            gap: 16px;
+            padding: 14px 24px;
+            background: rgba(13, 13, 16, 0.72);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--surface-border);
         }
 
-        .profile-content {
-            max-width: 50%;
+        .nav-brand {
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
         }
 
-        .profile-content h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin: 0;
+        .nav-brand span {
+            background: var(--accent-grad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .profile-content h2 {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
-            margin: 10px 0;
-        }
-
-        .profile-content p {
-            font-size: 1rem;
-            color: white;
-            margin: 20px 0;
-        }
-
-        .resume-button {
-            background-color: #6a5acd;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .resume-button:hover {
-            background-color: #8d7ef1;
-        }
-
-        .profile-image {
+        .nav-links {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 243px;
-            height: 243px;
-            background-color: #e3f2fd;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            gap: 6px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
-        .profile-image img {
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 999px;
+            transition: color 0.2s ease, background 0.2s ease;
+        }
+
+        .nav-links a:hover { color: var(--text); background: var(--surface); }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            padding: 80px 24px 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            padding: 4px;
+            background: var(--accent-grad);
+            box-shadow: 0 0 50px rgba(255, 31, 75, 0.35);
+        }
+
+        .hero-image img,
+        .hero-image .avatar-fallback {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
-        }
-
-                /* Ajustar estilo para tarjetas */
-        .work-card-content {
             display: flex;
             align-items: center;
+            justify-content: center;
+            background: var(--bg-soft);
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--accent-2);
+        }
+
+        .hero-content { max-width: 560px; }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-2);
+            margin-bottom: 12px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            line-height: 1.1;
+            margin: 0 0 8px;
+            font-weight: 800;
+        }
+
+        .hero-content h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 18px;
+            color: var(--text-muted);
+        }
+
+        .hero-content p {
+            font-size: 1.02rem;
+            color: var(--text-muted);
+            margin: 0 0 26px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent-grad);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(255, 31, 75, 0.4);
+        }
+
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(255, 31, 75, 0.55); }
+
+        .btn-ghost {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--surface-border);
+        }
+
+        .btn-ghost:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.08); }
+
+        /* ---------- Sections ---------- */
+        .section {
+            padding: 50px 24px;
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .section h2.section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin: 0 0 6px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section h2.section-title::after {
+            content: "";
+            display: block;
+            width: 54px;
+            height: 4px;
+            margin-top: 10px;
+            border-radius: 4px;
+            background: var(--accent-grad);
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            margin: 0 0 28px;
+            font-size: 1rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 22px;
+            margin-bottom: 22px;
+        }
+
+        /* ---------- Cards ---------- */
+        .work-card {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 26px;
+            border-radius: var(--radius);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+            border-color: rgba(255, 31, 75, 0.45);
+        }
+
+        .work-card-content {
+            display: flex;
+            align-items: flex-start;
             gap: 20px;
         }
 
         .work-card-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
             object-fit: cover;
+            flex-shrink: 0;
+            border: 1px solid var(--surface-border);
         }
 
-        .work-card-text h3 {
-            font-size: 1.2rem;
-            margin: 0;
-        }
-
-        .work-card-text p {
-            font-size: 1rem;
-            margin: 5px 0;
-        }
-
-        /* ...existing code... */
         .work-card-text {
             max-width: 100%;
             box-sizing: border-box;
@@ -272,165 +278,310 @@
             overflow-wrap: break-word;
         }
 
+        .work-card-text h3 {
+            font-size: 1.25rem;
+            margin: 0 0 6px;
+            font-weight: 700;
+        }
+
         .work-card-text p {
+            font-size: 0.98rem;
+            margin: 6px 0;
             max-width: 100%;
             box-sizing: border-box;
             word-break: break-word;
             overflow-wrap: break-word;
+            color: var(--text-muted);
         }
 
-                /* Estilo para los íconos de herramientas/tecnologías */
+        .work-card-text p strong { color: var(--text); }
+
+        .work-card-text ul {
+            margin: 8px 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        .work-card-text li { margin-bottom: 4px; }
+
+        .meta-date {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent-2);
+            background: rgba(255, 31, 75, 0.12);
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--accent-grad);
+            padding: 3px 9px;
+            border-radius: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        /* ---------- Tech icons ---------- */
         .tech-icons {
             display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap; /* Permite que los iconos bajen a otra línea */
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
             justify-content: flex-start;
+            align-items: center;
         }
 
-        .tech-icons img, .tech-icons i {
+        .tech-icons img,
+        .tech-icons i {
             width: 30px;
             height: 30px;
+            font-size: 30px;
             object-fit: contain;
             border-radius: 5px;
             transition: transform 0.2s ease;
-            margin-bottom: 5px;
         }
 
-        .tech-icons img:hover, .tech-icons i:hover {
-            transform: scale(1.1);
+        .tech-icons img:hover,
+        .tech-icons i:hover {
+            transform: scale(1.18);
             cursor: pointer;
         }
 
-        /* Responsive: reduce tamaño y espacio de iconos en pantallas pequeñas */
-        @media (max-width: 768px) {
-            .tech-icons {
-                gap: 6px;
-                justify-content: center;
-            }
-            .tech-icons img, .tech-icons i {
-                width: 24px;
-                height: 24px;
-            }
+        /* ---------- Buttons inside cards ---------- */
+        .app-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 18px;
         }
 
-
-                /* Botón de Ver en GitHub */
         .github-button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #24292f;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 18px;
+            padding: 9px 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--surface-border);
+            color: var(--text);
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            border-radius: 5px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border-radius: 8px;
             text-align: center;
-            transition: background-color 0.2s ease, transform 0.2s ease;
+            transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
         }
+
+        .app-buttons .github-button { margin-top: 0; }
 
         .github-button:hover {
-            background-color: #0366d6;
-            transform: scale(1.05);
+            background: rgba(255, 31, 75, 0.18);
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
-        .profile-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background-color: #1e1e1e;
-    flex-direction: column; /* Cambio para que se apilen verticalmente en pantallas pequeñas */
-}
+        .github-button.pubdev {
+            background: linear-gradient(135deg, #0b67a8 0%, #0f80c1 100%);
+            border-color: transparent;
+        }
 
-.profile-content {
-    text-align: center; /* Centra el texto */
-    max-width: 90%; /* Ajusta el tamaño en dispositivos pequeños */
-}
+        .github-button.pubdev:hover { background: linear-gradient(135deg, #0f80c1 0%, #149bdf 100%); }
 
-.profile-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px; /* Ajuste al tamaño de la imagen */
-    height: 150px; /* Ajuste al tamaño de la imagen */
-    background-color: #e3f2fd;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
-}
+        /* ---------- About / highlights ---------- */
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
 
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .highlight {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
 
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    .profile-section {
-        padding: 20px;
-    }
+        .highlight:hover { transform: translateY(-4px); border-color: rgba(255, 31, 75, 0.45); }
 
-    .profile-image {
-        width: 120px; /* Reducción del tamaño de la imagen en pantallas más pequeñas */
-        height: 120px; /* Reducción del tamaño de la imagen en pantallas más pequeñas */
-    }
+        .highlight .num {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: var(--accent-grad);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-    .profile-content h1 {
-        font-size: 1.8rem; /* Ajuste de tamaño del texto */
-    }
+        .highlight .label {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-top: 4px;
+        }
 
-    .profile-content h2 {
-        font-size: 1.5rem; /* Ajuste de tamaño del texto */
-    }
+        /* ---------- Footer ---------- */
+        footer {
+            text-align: center;
+            padding: 50px 24px 40px;
+            background: var(--bg-soft);
+            margin-top: 50px;
+            border-top: 1px solid var(--surface-border);
+        }
 
-    .profile-content p {
-        font-size: 0.9rem; /* Ajuste de tamaño del texto */
-    }
+        footer .footer-links {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
 
-    .work-card-text p {
-        font-size: 0.95rem;
-        padding: 0 2px;
-    }
-}
+        footer .footer-links a { margin-top: 0; }
 
+        footer p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
 
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            .navbar { padding: 12px 16px; }
+            .nav-links a { padding: 6px 9px; font-size: 0.82rem; }
 
+            .hero {
+                padding: 50px 18px 40px;
+                text-align: center;
+                gap: 30px;
+            }
+            .hero-content { max-width: 100%; }
+            .hero-content h1 { font-size: 2.1rem; }
+            .hero-actions { justify-content: center; }
+            .hero-image { width: 160px; height: 160px; }
+
+            .section { padding: 40px 18px; }
+
+            .work-card-content { flex-direction: column; align-items: center; text-align: center; }
+            .work-card-image { width: 100%; max-width: 240px; height: auto; }
+            .work-card-text ul { text-align: left; }
+            .tech-icons { justify-content: center; }
+            .app-buttons { justify-content: center; }
+
+            .tech-icons img, .tech-icons i { width: 26px; height: 26px; font-size: 26px; }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="profile-section">
-            <div class="profile-content">
-                <h1>Jesus Osorio Galvez</h1>
-                <h2>Backend/Mobile Developer</h2>
-                
+    <!-- ---------- Navbar ---------- -->
+    <nav class="navbar">
+        <div class="nav-brand">Jesus <span>Osorio</span></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#packages">Packages</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </nav>
 
-                <a href="https://drive.google.com/drive/folders/1dwbG7oxT6gnUWBNRH7joAGxngtzc4mta?usp=sharing" download>
-                    <button class="resume-button">Resume</button>
-                  </a>
-                  
+    <!-- ---------- Hero ---------- -->
+    <header class="hero" id="about">
+        <div class="hero-image">
+            <div class="avatar-fallback">JO</div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">Backend &amp; Mobile Developer</span>
+            <h1>Jesus Osorio Galvez</h1>
+            <h2>Native Android, Flutter &amp; RESTful API Development</h2>
+            <p>
+                Software developer with 4+ years of experience building native Android applications
+                with Kotlin and Jetpack Compose, cross-platform apps with Flutter, and scalable
+                RESTful APIs with Node.js. I deliver end-to-end mobile solutions that span UI,
+                local persistence, and cloud deployment. I also author open-source Flutter plugins
+                published on pub.dev, specializing in Bluetooth Low Energy (BLE) and beacon technologies.
+            </p>
+            <div class="hero-actions">
+                <a href="https://drive.google.com/drive/folders/1dwbG7oxT6gnUWBNRH7joAGxngtzc4mta?usp=sharing" target="_blank" class="btn btn-primary">Download Resume</a>
+                <a href="https://github.com/jesus2419" target="_blank" class="btn btn-ghost"><i class="devicon-github-original"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/jes%C3%BAs-osorio-79772a229/" target="_blank" class="btn btn-ghost"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
             </div>
-           
         </div>
     </header>
 
-    
+    <!-- ---------- Highlights ---------- -->
+    <div class="section" style="padding-top: 10px;">
+        <div class="highlight-grid">
+            <div class="highlight">
+                <div class="num">4+</div>
+                <div class="label">Years of experience</div>
+            </div>
+            <div class="highlight">
+                <div class="num">2</div>
+                <div class="label">Published pub.dev packages</div>
+            </div>
+            <div class="highlight">
+                <div class="num">10+</div>
+                <div class="label">Projects shipped</div>
+            </div>
+            <div class="highlight">
+                <div class="num">3</div>
+                <div class="label">Professional certifications</div>
+            </div>
+        </div>
+    </div>
 
-    <!-- New Section: Professional Experience -->
-    <div class="section experience">
-        <h2>Professional Experience</h2>
+    <!-- ---------- Professional Experience ---------- -->
+    <div class="section experience" id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Roles where I've built mobile apps, backends and automation systems.</p>
         <div class="card-grid">
+            <!-- Experience 0: Urbani -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <div class="work-card-text">
+                        <h3>Urbani</h3>
+                        <span class="meta-date">June 2025 - Present</span>
+                        <p><strong>Position:</strong> Software Developer</p>
+                        <p><strong>Area:</strong> IT</p>
+                        <p><strong>Responsibilities:</strong></p>
+                        <ul>
+                            <li>Maintain and evolve scalable applications that integrate with embedded systems, ensuring reliability and performance in production environments.</li>
+                            <li>Develop across native mobile (Kotlin, Swift), cross-platform (Flutter/Dart), and backend services (Node.js, Java) deployed on AWS.</li>
+                            <li>Implement low-level integrations and firmware communication layers in C++ for embedded hardware.</li>
+                            <li>Collaborate within Scrum teams to deliver iterative, production-grade releases.</li>
+                        </ul>
+                        <p><strong>Technologies:</strong></p>
+                        <div class="tech-icons">
+                            <i class="devicon-kotlin-plain" title="Kotlin"></i>
+                            <i class="devicon-swift-plain" title="Swift"></i>
+                            <i class="devicon-dart-plain" title="Dart"></i>
+                            <i class="devicon-cplusplus-plain" title="C++"></i>
+                            <i class="devicon-java-plain" title="Java"></i>
+                            <i class="devicon-nodejs-plain" title="Node.js"></i>
+                            <i class="devicon-amazonwebservices-original" title="AWS"></i>
+                            <img src="https://cdn.simpleicons.org/scrumalliance/ff5e7a" alt="Scrum" title="Scrum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Experience 1: Ideas Industry -->
             <div class="work-card">
                 <div class="work-card-content">
                     <div class="work-card-text">
                         <h3>Ideas Industry</h3>
+                        <span class="meta-date">March 2025 - June 2025</span>
                         <p><strong>Position:</strong> Mobile Application Developer / Backend Developer</p>
-                        <p><strong>Duration:</strong> March 2025 - Present</p>
                         <p><strong>Area:</strong> IT</p>
                         <p><strong>Responsibilities:</strong></p>
                         <ul>
@@ -454,15 +605,13 @@
                 </div>
             </div>
 
-
-
             <!-- Experience 2: Service Management Solutions -->
             <div class="work-card">
                 <div class="work-card-content">
                     <div class="work-card-text">
                         <h3>Service Management Solutions</h3>
+                        <span class="meta-date">February 2024 - December 2024</span>
                         <p><strong>Position:</strong> Mobile Application Developer</p>
-                        <p><strong>Duration:</strong> February 2024 - December 2024</p>
                         <p><strong>Area:</strong> IT</p>
                         <p><strong>Responsibilities:</strong></p>
                         <ul>
@@ -486,14 +635,13 @@
                 </div>
             </div>
 
-
             <!-- Experience 3: Schlumberger -->
             <div class="work-card">
                 <div class="work-card-content">
                     <div class="work-card-text">
                         <h3>Schlumberger</h3>
+                        <span class="meta-date">April 2023 - January 2024</span>
                         <p><strong>Position:</strong> IT Maintenance Intern</p>
-                        <p><strong>Duration:</strong> April 2023 - January 2024</p>
                         <p><strong>Area:</strong> IT</p>
                         <p><strong>Responsibilities:</strong></p>
                         <ul>
@@ -505,22 +653,21 @@
                         <div class="tech-icons">
                             <i class="devicon-java-plain" title="Java (Spring Boot)"></i>
                             <i class="devicon-microsoftsqlserver-plain" title="SQL Server"></i>
-                            <i class="devicon-powerbi-plain" title="Power BI"></i>
-                            <i class="devicon-sharepoint-plain" title="SharePoint"></i>
+                            <img src="https://img.icons8.com/color/96/power-bi-2021.png" alt="Power BI" title="Power BI">
+                            <img src="https://img.icons8.com/color/96/microsoft-sharepoint-2019.png" alt="SharePoint" title="SharePoint">
                             <i class="devicon-azure-plain" title="Azure"></i>
                         </div>
                     </div>
                 </div>
             </div>
 
-
             <!-- Experience 4: Dev Fusion -->
             <div class="work-card">
                 <div class="work-card-content">
                     <div class="work-card-text">
                         <h3>Dev Fusion</h3>
+                        <span class="meta-date">March 2021 - September 2022</span>
                         <p><strong>Position:</strong> Infrastructure Architect</p>
-                        <p><strong>Duration:</strong> March 2021 - September 2022</p>
                         <p><strong>Area:</strong> IT</p>
                         <p><strong>Responsibilities:</strong></p>
                         <ul>
@@ -542,30 +689,216 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
+    <!-- ---------- Published Packages (Open Source) ---------- -->
+    <div class="section" id="packages">
+        <h2 class="section-title">Published Packages</h2>
+        <p class="section-subtitle">Open-source Flutter plugins I authored and published on pub.dev.</p>
+        <div class="card-grid">
+            <!-- Package 1: eli_ble_gatt_server -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <div class="work-card-text">
+                        <h3>eli_ble_gatt_server <span class="badge">pub.dev</span></h3>
+                        <span class="meta-date">v0.2.0 · MIT License</span>
+                        <p>
+                            Flutter plugin that turns a device into a <strong>BLE GATT Server (peripheral)</strong>,
+                            advertising custom services and communicating with Bluetooth Low Energy clients.
+                            Supports Android (API 21+) and iOS (13+), custom Service/Characteristic UUIDs,
+                            READ/WRITE/NOTIFY operations with real-time event streams, broadcasting to all
+                            connected clients via <code>sendMessage()</code>, and an Android foreground service.
+                        </p>
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="Dart" title="Dart">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" title="Android">
+                            <img src="https://cdn.simpleicons.org/apple/f6f0f1" alt="iOS" title="iOS">
+                        </div>
+                        <div class="app-buttons">
+                            <a href="https://pub.dev/packages/eli_ble_gatt_server" target="_blank" class="github-button pubdev">View on pub.dev</a>
+                            <a href="https://github.com/jesus2419/eli_ble_gatt_server" target="_blank" class="github-button"><i class="devicon-github-original"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="section featured-works">
-        <h2>Certifications</h2>
+            <!-- Package 2: abi_beacon -->
+            <div class="work-card">
+                <div class="work-card-content">
+                    <div class="work-card-text">
+                        <h3>abi_beacon <span class="badge">pub.dev</span></h3>
+                        <span class="meta-date">v0.1.0 · MIT License</span>
+                        <p>
+                            Android Flutter plugin for <strong>iBeacon background monitoring</strong> that keeps
+                            scanning even when the app is closed or the screen is off, using a persistent
+                            foreground service. Provides region entry/exit detection, ranging (RSSI &amp;
+                            distance estimates), runtime permission handling, and — uniquely — management of
+                            manufacturer-specific battery restrictions (Xiaomi, Huawei, Samsung, OnePlus) with
+                            deep links to OEM settings and Doze exemption status. (Android API 24+).
+                        </p>
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="Dart" title="Dart">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" title="Android">
+                            <img src="https://cdn.simpleicons.org/bluetooth/3CA4E8" alt="Bluetooth" title="Bluetooth Low Energy">
+                        </div>
+                        <div class="app-buttons">
+                            <a href="https://pub.dev/packages/abi_beacon" target="_blank" class="github-button pubdev">View on pub.dev</a>
+                            <a href="https://github.com/jesus2419/Abi-Beacon" target="_blank" class="github-button"><i class="devicon-github-original"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------- Personal Projects ---------- -->
+    <div class="section" id="projects">
+        <h2 class="section-title">Personal Projects</h2>
+        <p class="section-subtitle">Apps and platforms I've designed and built end-to-end.</p>
+        <div class="card-grid">
+            <div class="work-card">
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/stardobys2.png?raw=true" alt="Star Dobys" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>Star Dobys</h3>
+                        <span class="meta-date">May 2023 - Jan 2024</span>
+                        <p>Stardobys is a web-based social network built with React, Node.js, and MySQL designed to connect music artists with their fans. The platform allows artists to share their music, interact with followers, and grow their fanbase. Fans can discover new music, follow their favorite artists, comment on posts, and stay updated on upcoming releases and events.</p>
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
+                        </div>
+                        <a href="https://github.com/jesus2419/StarDobys" target="_blank" class="github-button"><i class="devicon-github-original"></i> View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/servinear.jpg?raw=true" alt="Service Finder App" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>Service Finder App</h3>
+                        <span class="meta-date">Feb 2024 - Ongoing</span>
+                        <p>This is a mobile application built using Kotlin and Android Studio designed to connect users with various service providers. The app allows users to browse, request, and rate services offered by professionals in different fields. Whether you're looking for someone to handle home repairs, personal training, tutoring, or other freelance services, this app makes it easy to find the right person for the job.</p>
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android Studio" title="Android Studio">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" title="PHP">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure" title="Azure">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu" title="Ubuntu">
+                        </div>
+                        <a href="https://github.com/jesus2419/ServiNear" target="_blank" class="github-button"><i class="devicon-github-original"></i> View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/neneros.png?raw=true" alt="Neneros Finance App" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>Neneros Finance</h3>
+                        <span class="meta-date">Jun 2024 - Present</span>
+                        <p>
+                            A cross-platform personal finance app built with Flutter for Android and iOS.
+                            Neneros helps users track expenses, set savings goals, and analyze spending habits
+                            with AI-powered insights. Features include secure biometric authentication,
+                            real-time sync across devices, interactive charts, PDF report generation,
+                            and smart budget suggestions. Designed for financial clarity and control.
+                        </p>
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter (Cross-platform)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="Dart" title="Dart">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" alt="SQLite" title="SQLite (Local storage)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase (Auth & Cloud Sync)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python (Data analysis)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="ML (Spending predictions)">
+                            <img src="https://cdn.simpleicons.org/apple/f6f0f1" alt="iOS" title="iOS">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" title="Android">
+                        </div>
+                        <div class="app-buttons">
+                            <a href="https://github.com/jesus2419/financial_app" target="_blank" class="github-button"><i class="devicon-github-original"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/gym.jpg?raw=true" alt="GymFit App" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>GymFit</h3>
+                        <span class="meta-date">Aug 2024 - Present</span>
+                        <p>
+                            A modern gym management app for Android, designed to help users track workouts,
+                            explore trainer profiles, and create personalized routines. Features include
+                            real-time gym info, exercise libraries with video demonstrations, progress analytics,
+                            and social sharing. Built with Jetpack Compose for a fluid UI and SQLite for offline access.
+                        </p>
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" title="Android">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jetpackcompose/jetpackcompose-original.svg" alt="Jetpack Compose" title="Jetpack Compose">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" alt="SQLite" title="SQLite (Local storage)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase (Optional cloud sync)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" alt="Material 3" title="Material 3 Design">
+                        </div>
+                        <div class="app-buttons">
+                            <a href="https://github.com/jesus2419/GYM-Android" target="_blank" class="github-button"><i class="devicon-github-original"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-card-content">
+                    <img src="https://github.com/jesus2419/imagenes/blob/main/gym.jpg?raw=true" alt="GymFit Back Office" class="work-card-image">
+                    <div class="work-card-text">
+                        <h3>GymFit Back Office</h3>
+                        <span class="meta-date">Sep 2024 - Present</span>
+                        <p>
+                            A comprehensive admin dashboard for gym management, built with React and Material-UI.
+                            Allows staff to manage memberships, trainer schedules, equipment, and analytics.
+                            Integrates with the GymFit mobile app via a Node.js API and MySQL database for real-time data synchronization.
+                        </p>
+                        <div class="tech-icons">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" alt="Material-UI" title="Material-UI">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" title="Express">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux" title="Redux (State Management)">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
+                        </div>
+                        <div class="app-buttons">
+                            <a href="https://github.com/jesus2419/GYM-Admin" target="_blank" class="github-button"><i class="devicon-github-original"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------- Certifications ---------- -->
+    <div class="section" id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Professional courses and credentials I've earned.</p>
         <div class="card-grid">
             <div class="work-card">
                 <div class="work-card-content">
                     <img src="https://newsroom.unl.edu/announce/files/file162269.jpg" alt="AWS Certification Badge" class="work-card-image">
                     <div class="work-card-text">
                         <h3>AWS Cloud Practitioner Essentials</h3>
-                        <p>Issued: May 13, 2025</p>
+                        <span class="meta-date">Issued May 13, 2025</span>
                         <p>This certificate acknowledges that <strong>Jesus Osorio</strong> successfully completed the AWS Cloud Practitioner Essentials course. The program covers core AWS services, cloud concepts, security, architecture, pricing, and support, providing a foundational understanding of AWS Cloud.</p>
-                        
-                        <!-- Fila de íconos de tecnologías -->
                         <div class="tech-icons">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" title="AWS">
+                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cloudflare/cloudflare-original.svg" alt="Cloud" title="Cloud Fundamentals">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" title="Linux (Basic Concepts)">
                         </div>
-                        
-                        <!-- Botón Ver certificado -->
                         <a href="https://drive.google.com/file/d/1Lm4r1gAqXsswCQZUmLOmfPMoCEQFOti9/view?usp=sharing" target="_blank" class="github-button">View Certificate</a>
                     </div>
                 </div>
@@ -576,230 +909,41 @@
                     <img src="https://th.bing.com/th/id/OIP.hdOrjwc9RGfCpvacm6s07gHaFM?rs=1&pid=ImgDetMain" alt="Flutter Certification Badge" class="work-card-image">
                     <div class="work-card-text">
                         <h3>Professional Flutter Course</h3>
-                        <p>Issued: May 22, 2025</p>
+                        <span class="meta-date">Issued May 22, 2025</span>
                         <p>This certificate recognizes that <strong>Jesus Osorio Galvez</strong> completed lessons as part of the Professional Flutter Course provided by Código Facilito. The course covered mobile app development using Flutter, including widgets, state management, and UI best practices.</p>
-                        
-                        <!-- Fila de íconos de tecnologías -->
                         <div class="tech-icons">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="Dart" title="Dart">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" title="Android Development">
                         </div>
-                        
-                        <!-- Botón Ver certificado -->
                         <a href="https://drive.google.com/file/d/1mBXGJrhlL2x_6VMJ1NYCWp6-VH_D9s-s/view?usp=sharing" target="_blank" class="github-button">View Certificate</a>
                     </div>
                 </div>
             </div>
-
-            
-
-
-            
-            
-            
-            
-        </div>
-        <div class="card-grid">
 
             <div class="work-card">
                 <div class="work-card-content">
                     <img src="https://logosmarken.com/wp-content/uploads/2021/03/Docker-Emblem.png" alt="Docker Certification Badge" class="work-card-image">
                     <div class="work-card-text">
                         <h3>Professional Docker Course</h3>
-                        <p>Issued: May 20, 2025</p>
+                        <span class="meta-date">Issued May 20, 2025</span>
                         <p>This certificate recognizes that <strong>Jesus Osorio Galvez</strong> completed lessons as part of the Professional Docker Course provided by Código Facilito. The course covered containerization using Docker, including image creation, container management, and deployment best practices.</p>
-                        
-                        <!-- Fila de íconos de tecnologías -->
                         <div class="tech-icons">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker" title="Docker">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" title="Linux">
                             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="Nginx" title="Web Servers">
                         </div>
-                        
-                        <!-- Botón Ver certificado -->
                         <a href="https://drive.google.com/file/d/18ZvVdjzz9c_ePzk85Up00kQfm0XdgXXE/view?usp=sharing" target="_blank" class="github-button">View Certificate</a>
                     </div>
                 </div>
             </div>
-
         </div>
-
-        
     </div>
 
-    <div class="section featured-works">
-        <h2>Personal projects</h2>
-        <div class="card-grid">
-            <div class="work-card">
-                <div class="work-card-content">
-                    <img src="https://github.com/jesus2419/imagenes/blob/main/stardobys2.png?raw=true" alt="Designing Dashboards" class="work-card-image">
-                    <div class="work-card-text">
-                        <h3>Star Dobys</h3>
-                        <p>May-2023 | Jan-2024</p>
-                        <p>Stardobys is a web-based social network built with React, Node.js, and MySQL designed to connect music artists with their fans. The platform allows artists to share their music, interact with followers, and grow their fanbase. Fans can discover new music, follow their favorite artists, comment on posts, and stay updated on upcoming releases and events.</p>
-                        <!-- Fila de íconos de tecnologías -->
-                        <div class="tech-icons">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
-                        </div>
-                        <!-- Botón Ver en GitHub -->
-                        <a href="https://github.com/jesus2419/StarDobys" target="_blank" class="github-button">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="work-card">
-                <div class="work-card-content">
-                    <img src="https://github.com/jesus2419/imagenes/blob/main/servinear.jpg?raw=true" alt="Mobile Application" class="work-card-image">
-                    <div class="work-card-text">
-                        <h3>Service Finder App</h3>
-                        <p>Feb-2024 | Ongoing</p>
-                        <p>This is a mobile application built using Kotlin and Android Studio designed to connect users with various service providers. The app allows users to browse, request, and rate services offered by professionals in different fields. Whether you're looking for someone to handle home repairs, personal training, tutoring, or other freelance services, this app makes it easy to find the right person for the job.</p>
-                        
-                        <!-- Fila de íconos de tecnologías -->
-                        <div class="tech-icons">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android Studio" title="Android Studio">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" title="PHP">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure" title="Azure">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu" title="Ubuntu">
-                        </div>
-                        
-                        <!-- Botón Ver en GitHub -->
-                        <a href="https://github.com/jesus2419/ServiNear" target="_blank" class="github-button">View on GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-             
-
-            
-        </div>
-
-        <div class="card-grid">
-
-            
-            <div class="work-card">
-                <div class="work-card-content">
-                    <img src="https://github.com/jesus2419/imagenes/blob/main/neneros.png?raw=true" alt="Neneros Finance App" class="work-card-image">
-                    <div class="work-card-text">
-                        <h3>Neneros Finance</h3>
-                        <p>Jun 2024 | Present</p>
-                        <p>
-                            A cross-platform personal finance app built with Flutter for Android and iOS. 
-                            Neneros helps users track expenses, set savings goals, and analyze spending habits 
-                            with AI-powered insights. Features include secure biometric authentication, 
-                            real-time sync across devices, interactive charts, PDF report generation, 
-                            and smart budget suggestions. Designed for financial clarity and control.
-                        </p>
-                        
-                        <!-- Tech Stack Icons -->
-                        <div class="tech-icons">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" title="Flutter (Cross-platform)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="Dart" title="Dart">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" alt="SQLite" title="SQLite (Local storage)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase (Auth & Cloud Sync)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python (Data analysis)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" title="ML (Spending predictions)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg" alt="iOS" title="iOS">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" title="Android">
-                        </div>
-                        
-                        <!-- Action Buttons -->
-                        <div class="app-buttons">
-                            <a href="https://github.com/jesus2419/financial_app" target="_blank" class="github-button">View on GitHub</a>
-                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="work-card">
-                <div class="work-card-content">
-                    <img src="https://github.com/jesus2419/imagenes/blob/main/gym.jpg?raw=true" alt="GymFit App" class="work-card-image">
-                    <div class="work-card-text">
-                        <h3>GymFit</h3>
-                        <p>Aug 2024 | Present</p>
-                        <p>
-                            A modern gym management app for Android, designed to help users track workouts, 
-                            explore trainer profiles, and create personalized routines. Features include 
-                            real-time gym info, exercise libraries with video demonstrations, progress analytics, 
-                            and social sharing. Built with Jetpack Compose for a fluid UI and SQLite for offline access.
-                        </p>
-                        
-                        <!-- Tech Stack Icons -->
-                        <div class="tech-icons">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" title="Android">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" title="Kotlin">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jetpackcompose/jetpackcompose-original.svg" alt="Jetpack Compose" title="Jetpack Compose">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" alt="SQLite" title="SQLite (Local storage)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase (Optional cloud sync)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" alt="Material 3" title="Material 3 Design">
-                        </div>
-                        
-                   
-                        <!-- Action Buttons -->
-                        <div class="app-buttons">
-                            <a href="https://github.com/jesus2419/GYM-Android" target="_blank" class="github-button">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="card-grid">
-            <div class="work-card">
-                <div class="work-card-content">
-                    <img src="https://github.com/jesus2419/imagenes/blob/main/gym.jpg?raw=true" alt="GymFit Back Office" class="work-card-image">
-                    <div class="work-card-text">
-                        <h3>GymFit Back Office</h3>
-                        <p>Sep 2024 | Present</p>
-                        <p>
-                            A comprehensive admin dashboard for gym management, built with React and Material-UI. 
-                            Allows staff to manage memberships, trainer schedules, equipment, and analytics. 
-                            Integrates with the GymFit mobile app via a Node.js API and MySQL database for real-time data synchronization.
-                        </p>
-                        
-                        <!-- Tech Stack Icons -->
-                        <div class="tech-icons">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" title="React">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg" alt="Material-UI" title="Material-UI">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" alt="Express" title="Express">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="Redux" title="Redux (State Management)">
-                            <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
-                        </div>
-                        
-                        
-                        
-                        <!-- Action Buttons -->
-                        <div class="app-buttons">
-                            <a href="https://github.com/jesus2419/GYM-Admin" target="_blank" class="github-button">View on GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-
-        </div>
-
-               
-
-
-
-    </div>
-
-
-    <!-- New Section: Technical Skills -->
-    <div class="section technical-skills">
-        <h2>Technical Skills</h2>
+    <!-- ---------- Technical Skills ---------- -->
+    <div class="section technical-skills" id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Languages, frameworks and tools I work with.</p>
         <div class="card-grid">
             <div class="work-card">
                 <div class="work-card-content">
@@ -844,13 +988,13 @@
             <div class="work-card">
                 <div class="work-card-content">
                     <div class="work-card-text">
-                        <h3>Frameworks & Tools</h3>
+                        <h3>Frameworks &amp; Tools</h3>
                         <div class="tech-icons">
                             <i class="devicon-flutter-plain" title="Flutter"></i>
                             <i class="devicon-react-original" title="React Native"></i>
                             <i class="devicon-android-plain" title="Android Jetpack"></i>
                             <i class="devicon-git-plain" title="Git"></i>
-                            <i class="devicon-dagger-plain" title="Dagger"></i>
+                            <i class="devicon-gradle-plain" title="Gradle"></i>
                             <i class="devicon-postman-plain" title="Postman"></i>
                         </div>
                         <ul>
@@ -859,7 +1003,8 @@
                             <li><strong>React:</strong> 2 years (Intermediate)</li>
                             <li><strong>Android Jetpack:</strong> 3 years (Intermediate)</li>
                             <li><strong>Git:</strong> 3 years (Intermediate)</li>
-                            <li><strong>Dagger:</strong> 3 years (Intermediate)</li>
+                            <li><strong>Gradle:</strong> 3 years (Intermediate)</li>
+                            <li><strong>Dagger (DI):</strong> 3 years (Intermediate)</li>
                             <li><strong>Postman:</strong> 3 years (Intermediate)</li>
                         </ul>
                     </div>
@@ -869,7 +1014,7 @@
             <div class="work-card">
                 <div class="work-card-content">
                     <div class="work-card-text">
-                        <h3>Databases & Cloud</h3>
+                        <h3>Databases &amp; Cloud</h3>
                         <div class="tech-icons">
                             <i class="devicon-mysql-plain" title="MySQL"></i>
                             <i class="devicon-postgresql-plain" title="PostgreSQL"></i>
@@ -891,11 +1036,31 @@
             <div class="work-card">
                 <div class="work-card-content">
                     <div class="work-card-text">
+                        <h3>Specialized Skills</h3>
+                        <div class="tech-icons">
+                            <img src="https://cdn.simpleicons.org/bluetooth/3CA4E8" alt="BLE" title="Bluetooth Low Energy">
+                            <i class="devicon-dart-plain" title="Dart"></i>
+                            <i class="devicon-flutter-plain" title="Flutter Plugins"></i>
+                            <i class="devicon-android-plain" title="Android Native"></i>
+                        </div>
+                        <ul>
+                            <li><strong>Bluetooth Low Energy (BLE):</strong> GATT server &amp; beacon monitoring</li>
+                            <li><strong>Flutter plugin development:</strong> published on pub.dev</li>
+                            <li><strong>RESTful API design:</strong> Node.js / Express</li>
+                            <li><strong>Android foreground services &amp; background tasks</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="work-card-content">
+                    <div class="work-card-text">
                         <h3>Programming Methodologies</h3>
                         <div class="tech-icons">
                             <i class="devicon-docker-plain" title="DevOps"></i>
                             <i class="devicon-jenkins-plain" title="CI/CD"></i>
-                            <i class="devicon-scrum-plain" title="Scrum"></i>
+                            <img src="https://cdn.simpleicons.org/scrumalliance/ff5e7a" alt="Scrum" title="Scrum">
                         </div>
                         <ul>
                             <li><strong>DevOps:</strong> 3 years (Intermediate)</li>
@@ -909,8 +1074,12 @@
     </div>
 
     <footer>
-        <a href="https://www.linkedin.com/in/jes%C3%BAs-osorio-79772a229/" target="_blank" class="github-button" >Linkedin</a>
-        <a href="https://github.com/jesus2419" target="_blank" class="github-button">Github</a>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/jes%C3%BAs-osorio-79772a229/" target="_blank" class="github-button"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+            <a href="https://github.com/jesus2419" target="_blank" class="github-button"><i class="devicon-github-original"></i> GitHub</a>
+            <a href="#packages" class="github-button pubdev">pub.dev Packages</a>
+        </div>
+        <p>© 2026 Jesus Osorio Galvez · Backend &amp; Mobile Developer</p>
     </footer>
 </body>
 </html>
