@@ -95,6 +95,47 @@
 
         .nav-links a:hover { color: var(--text); background: var(--surface); }
 
+        /* Hamburger button (mobile only) */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 42px;
+            height: 42px;
+            padding: 0;
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 300;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin: 0 auto;
+            background: var(--text);
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.2s ease;
+        }
+
+        body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+        body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        /* Drawer overlay */
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 150;
+        }
+
+        body.nav-open .nav-overlay { display: block; }
+
         /* ---------- Hero ---------- */
         .hero {
             display: flex;
@@ -456,7 +497,39 @@
         /* ---------- Responsive ---------- */
         @media (max-width: 768px) {
             .navbar { padding: 12px 16px; }
-            .nav-links a { padding: 6px 9px; font-size: 0.82rem; }
+
+            .nav-toggle { display: flex; }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                height: 100dvh;
+                width: min(78vw, 300px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 4px;
+                padding: 84px 20px 28px;
+                background: rgba(18, 11, 14, 0.98);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-left: 1px solid var(--surface-border);
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                z-index: 200;
+            }
+
+            body.nav-open { overflow: hidden; }
+            body.nav-open .nav-links { transform: translateX(0); }
+
+            .nav-links a {
+                font-size: 1rem;
+                padding: 14px 16px;
+                border-radius: 10px;
+            }
 
             .hero {
                 padding: 50px 18px 40px;
@@ -484,7 +557,12 @@
     <!-- ---------- Navbar ---------- -->
     <nav class="navbar">
         <div class="nav-brand">Jesus <span>Osorio</span></div>
-        <div class="nav-links">
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#packages">Packages</a>
@@ -493,6 +571,7 @@
             <a href="#skills">Skills</a>
         </div>
     </nav>
+    <div class="nav-overlay"></div>
 
     <!-- ---------- Hero ---------- -->
     <header class="hero" id="about">
@@ -1081,5 +1160,29 @@
         </div>
         <p>© 2026 Jesus Osorio Galvez · Backend &amp; Mobile Developer</p>
     </footer>
+
+    <script>
+        (function () {
+            var toggle = document.querySelector('.nav-toggle');
+            var overlay = document.querySelector('.nav-overlay');
+            var links = document.querySelectorAll('.nav-links a');
+
+            function setOpen(open) {
+                document.body.classList.toggle('nav-open', open);
+                toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+
+            toggle.addEventListener('click', function () {
+                setOpen(!document.body.classList.contains('nav-open'));
+            });
+            overlay.addEventListener('click', function () { setOpen(false); });
+            links.forEach(function (a) {
+                a.addEventListener('click', function () { setOpen(false); });
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') setOpen(false);
+            });
+        })();
+    </script>
 </body>
 </html>
